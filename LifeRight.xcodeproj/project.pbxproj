@@ -1,0 +1,447 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A13DCE116459DE100865377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DCE016459DE100865377 /* UIKit.framework */; };
+		0A13DCE316459DE100865377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DCE216459DE100865377 /* Foundation.framework */; };
+		0A13DCE516459DE100865377 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DCE416459DE100865377 /* CoreGraphics.framework */; };
+		0A13DCEB16459DE100865377 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A13DCE916459DE100865377 /* InfoPlist.strings */; };
+		0A13DCED16459DE100865377 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A13DCEC16459DE100865377 /* main.m */; };
+		0A13DCF116459DE100865377 /* LRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A13DCF016459DE100865377 /* LRAppDelegate.m */; };
+		0A13DCF316459DE100865377 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A13DCF216459DE100865377 /* Default.png */; };
+		0A13DCF516459DE100865377 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A13DCF416459DE100865377 /* Default@2x.png */; };
+		0A13DCF716459DE100865377 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A13DCF616459DE100865377 /* Default-568h@2x.png */; };
+		0A13DCFF16459DE100865377 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DCFE16459DE100865377 /* SenTestingKit.framework */; };
+		0A13DD0016459DE100865377 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DCE016459DE100865377 /* UIKit.framework */; };
+		0A13DD0116459DE100865377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DCE216459DE100865377 /* Foundation.framework */; };
+		0A13DD0916459DE100865377 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A13DD0716459DE100865377 /* InfoPlist.strings */; };
+		0A13DD0C16459DE100865377 /* LifeRightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A13DD0B16459DE100865377 /* LifeRightTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0A13DD0216459DE100865377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0A13DCD316459DE100865377 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A13DCDB16459DE100865377;
+			remoteInfo = LifeRight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A13DCDC16459DE100865377 /* LifeRight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LifeRight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A13DCE016459DE100865377 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0A13DCE216459DE100865377 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0A13DCE416459DE100865377 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0A13DCE816459DE100865377 /* LifeRight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LifeRight-Info.plist"; sourceTree = "<group>"; };
+		0A13DCEA16459DE100865377 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A13DCEC16459DE100865377 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0A13DCEE16459DE100865377 /* LifeRight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LifeRight-Prefix.pch"; sourceTree = "<group>"; };
+		0A13DCEF16459DE100865377 /* LRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LRAppDelegate.h; sourceTree = "<group>"; };
+		0A13DCF016459DE100865377 /* LRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRAppDelegate.m; sourceTree = "<group>"; };
+		0A13DCF216459DE100865377 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		0A13DCF416459DE100865377 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		0A13DCF616459DE100865377 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		0A13DCFD16459DE100865377 /* LifeRightTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LifeRightTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A13DCFE16459DE100865377 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		0A13DD0616459DE100865377 /* LifeRightTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LifeRightTests-Info.plist"; sourceTree = "<group>"; };
+		0A13DD0816459DE100865377 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0A13DD0A16459DE100865377 /* LifeRightTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeRightTests.h; sourceTree = "<group>"; };
+		0A13DD0B16459DE100865377 /* LifeRightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeRightTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A13DCD916459DE100865377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A13DCE116459DE100865377 /* UIKit.framework in Frameworks */,
+				0A13DCE316459DE100865377 /* Foundation.framework in Frameworks */,
+				0A13DCE516459DE100865377 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A13DCF916459DE100865377 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A13DCFF16459DE100865377 /* SenTestingKit.framework in Frameworks */,
+				0A13DD0016459DE100865377 /* UIKit.framework in Frameworks */,
+				0A13DD0116459DE100865377 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A13DCD116459DE100865377 = {
+			isa = PBXGroup;
+			children = (
+				0A13DCE616459DE100865377 /* LifeRight */,
+				0A13DD0416459DE100865377 /* LifeRightTests */,
+				0A13DCDF16459DE100865377 /* Frameworks */,
+				0A13DCDD16459DE100865377 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A13DCDD16459DE100865377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DCDC16459DE100865377 /* LifeRight.app */,
+				0A13DCFD16459DE100865377 /* LifeRightTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A13DCDF16459DE100865377 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DCE016459DE100865377 /* UIKit.framework */,
+				0A13DCE216459DE100865377 /* Foundation.framework */,
+				0A13DCE416459DE100865377 /* CoreGraphics.framework */,
+				0A13DCFE16459DE100865377 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A13DCE616459DE100865377 /* LifeRight */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DCEF16459DE100865377 /* LRAppDelegate.h */,
+				0A13DCF016459DE100865377 /* LRAppDelegate.m */,
+				0A13DCE716459DE100865377 /* Supporting Files */,
+			);
+			path = LifeRight;
+			sourceTree = "<group>";
+		};
+		0A13DCE716459DE100865377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DCE816459DE100865377 /* LifeRight-Info.plist */,
+				0A13DCE916459DE100865377 /* InfoPlist.strings */,
+				0A13DCEC16459DE100865377 /* main.m */,
+				0A13DCEE16459DE100865377 /* LifeRight-Prefix.pch */,
+				0A13DCF216459DE100865377 /* Default.png */,
+				0A13DCF416459DE100865377 /* Default@2x.png */,
+				0A13DCF616459DE100865377 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A13DD0416459DE100865377 /* LifeRightTests */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DD0A16459DE100865377 /* LifeRightTests.h */,
+				0A13DD0B16459DE100865377 /* LifeRightTests.m */,
+				0A13DD0516459DE100865377 /* Supporting Files */,
+			);
+			path = LifeRightTests;
+			sourceTree = "<group>";
+		};
+		0A13DD0516459DE100865377 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DD0616459DE100865377 /* LifeRightTests-Info.plist */,
+				0A13DD0716459DE100865377 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A13DCDB16459DE100865377 /* LifeRight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A13DD0F16459DE100865377 /* Build configuration list for PBXNativeTarget "LifeRight" */;
+			buildPhases = (
+				0A13DCD816459DE100865377 /* Sources */,
+				0A13DCD916459DE100865377 /* Frameworks */,
+				0A13DCDA16459DE100865377 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LifeRight;
+			productName = LifeRight;
+			productReference = 0A13DCDC16459DE100865377 /* LifeRight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0A13DCFC16459DE100865377 /* LifeRightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A13DD1216459DE100865377 /* Build configuration list for PBXNativeTarget "LifeRightTests" */;
+			buildPhases = (
+				0A13DCF816459DE100865377 /* Sources */,
+				0A13DCF916459DE100865377 /* Frameworks */,
+				0A13DCFA16459DE100865377 /* Resources */,
+				0A13DCFB16459DE100865377 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0A13DD0316459DE100865377 /* PBXTargetDependency */,
+			);
+			name = LifeRightTests;
+			productName = LifeRightTests;
+			productReference = 0A13DCFD16459DE100865377 /* LifeRightTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A13DCD316459DE100865377 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LR;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = somethingpointless;
+			};
+			buildConfigurationList = 0A13DCD616459DE100865377 /* Build configuration list for PBXProject "LifeRight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0A13DCD116459DE100865377;
+			productRefGroup = 0A13DCDD16459DE100865377 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A13DCDB16459DE100865377 /* LifeRight */,
+				0A13DCFC16459DE100865377 /* LifeRightTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A13DCDA16459DE100865377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A13DCEB16459DE100865377 /* InfoPlist.strings in Resources */,
+				0A13DCF316459DE100865377 /* Default.png in Resources */,
+				0A13DCF516459DE100865377 /* Default@2x.png in Resources */,
+				0A13DCF716459DE100865377 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A13DCFA16459DE100865377 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A13DD0916459DE100865377 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A13DCFB16459DE100865377 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A13DCD816459DE100865377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A13DCED16459DE100865377 /* main.m in Sources */,
+				0A13DCF116459DE100865377 /* LRAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A13DCF816459DE100865377 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A13DD0C16459DE100865377 /* LifeRightTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0A13DD0316459DE100865377 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A13DCDB16459DE100865377 /* LifeRight */;
+			targetProxy = 0A13DD0216459DE100865377 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0A13DCE916459DE100865377 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A13DCEA16459DE100865377 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0A13DD0716459DE100865377 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0A13DD0816459DE100865377 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0A13DD0D16459DE100865377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0A13DD0E16459DE100865377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A13DD1016459DE100865377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LifeRight/LifeRight-Prefix.pch";
+				INFOPLIST_FILE = "LifeRight/LifeRight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0A13DD1116459DE100865377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LifeRight/LifeRight-Prefix.pch";
+				INFOPLIST_FILE = "LifeRight/LifeRight-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		0A13DD1316459DE100865377 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LifeRight.app/LifeRight";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LifeRight/LifeRight-Prefix.pch";
+				INFOPLIST_FILE = "LifeRightTests/LifeRightTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		0A13DD1416459DE100865377 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LifeRight.app/LifeRight";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LifeRight/LifeRight-Prefix.pch";
+				INFOPLIST_FILE = "LifeRightTests/LifeRightTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A13DCD616459DE100865377 /* Build configuration list for PBXProject "LifeRight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A13DD0D16459DE100865377 /* Debug */,
+				0A13DD0E16459DE100865377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A13DD0F16459DE100865377 /* Build configuration list for PBXNativeTarget "LifeRight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A13DD1016459DE100865377 /* Debug */,
+				0A13DD1116459DE100865377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0A13DD1216459DE100865377 /* Build configuration list for PBXNativeTarget "LifeRightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A13DD1316459DE100865377 /* Debug */,
+				0A13DD1416459DE100865377 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0A13DCD316459DE100865377 /* Project object */;
+}
