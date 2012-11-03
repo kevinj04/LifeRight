@@ -7,6 +7,7 @@
 //
 
 #import "LRAppDelegate.h"
+#import "LRCollectionViewController.h"
 
 @implementation LRAppDelegate
 
@@ -15,6 +16,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    LRCollectionViewController *collectionViewController = [[LRCollectionViewController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
+    self.window.rootViewController = collectionViewController;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }

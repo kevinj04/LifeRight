@@ -21,6 +21,13 @@
 		0A13DD0116459DE100865377 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DCE216459DE100865377 /* Foundation.framework */; };
 		0A13DD0916459DE100865377 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0A13DD0716459DE100865377 /* InfoPlist.strings */; };
 		0A13DD0C16459DE100865377 /* LifeRightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A13DD0B16459DE100865377 /* LifeRightTests.m */; };
+		0A13DD1916459F0F00865377 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DD1816459F0F00865377 /* Accounts.framework */; };
+		0A13DD1B16459F1500865377 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A13DD1A16459F1500865377 /* Social.framework */; };
+		0A13DD1F16459F4900865377 /* LRCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A13DD1D16459F4900865377 /* LRCollectionViewController.m */; };
+		0A13DD2016459F4900865377 /* LRCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A13DD1E16459F4900865377 /* LRCollectionViewController.xib */; };
+		0A13DD2616459F8000865377 /* LRCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A13DD2516459F8000865377 /* LRCollectionViewCell.m */; };
+		0A13DD2916459FBB00865377 /* LRCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A13DD2816459FBB00865377 /* LRCollectionViewDataSource.m */; };
+		0A13DD311645A02800865377 /* LRTwitterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A13DD301645A02800865377 /* LRTwitterAPI.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,17 @@
 		0A13DD0816459DE100865377 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0A13DD0A16459DE100865377 /* LifeRightTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifeRightTests.h; sourceTree = "<group>"; };
 		0A13DD0B16459DE100865377 /* LifeRightTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifeRightTests.m; sourceTree = "<group>"; };
+		0A13DD1816459F0F00865377 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		0A13DD1A16459F1500865377 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		0A13DD1C16459F4900865377 /* LRCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCollectionViewController.h; sourceTree = "<group>"; };
+		0A13DD1D16459F4900865377 /* LRCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCollectionViewController.m; sourceTree = "<group>"; };
+		0A13DD1E16459F4900865377 /* LRCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LRCollectionViewController.xib; sourceTree = "<group>"; };
+		0A13DD2416459F8000865377 /* LRCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCollectionViewCell.h; sourceTree = "<group>"; };
+		0A13DD2516459F8000865377 /* LRCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCollectionViewCell.m; sourceTree = "<group>"; };
+		0A13DD2716459FBB00865377 /* LRCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCollectionViewDataSource.h; sourceTree = "<group>"; };
+		0A13DD2816459FBB00865377 /* LRCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCollectionViewDataSource.m; sourceTree = "<group>"; };
+		0A13DD2F1645A02800865377 /* LRTwitterAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTwitterAPI.h; sourceTree = "<group>"; };
+		0A13DD301645A02800865377 /* LRTwitterAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTwitterAPI.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A13DD1B16459F1500865377 /* Social.framework in Frameworks */,
+				0A13DD1916459F0F00865377 /* Accounts.framework in Frameworks */,
 				0A13DCE116459DE100865377 /* UIKit.framework in Frameworks */,
 				0A13DCE316459DE100865377 /* Foundation.framework in Frameworks */,
 				0A13DCE516459DE100865377 /* CoreGraphics.framework in Frameworks */,
@@ -101,6 +121,8 @@
 		0A13DCDF16459DE100865377 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A13DD1816459F0F00865377 /* Accounts.framework */,
+				0A13DD1A16459F1500865377 /* Social.framework */,
 				0A13DCE016459DE100865377 /* UIKit.framework */,
 				0A13DCE216459DE100865377 /* Foundation.framework */,
 				0A13DCE416459DE100865377 /* CoreGraphics.framework */,
@@ -112,6 +134,10 @@
 		0A13DCE616459DE100865377 /* LifeRight */ = {
 			isa = PBXGroup;
 			children = (
+				0A13DD2E1645A00500865377 /* Twitter */,
+				0A13DD1516459EDA00865377 /* Cells */,
+				0A13DD1616459EDA00865377 /* DataSources */,
+				0A13DD1716459EDA00865377 /* ViewControllers */,
 				0A13DCEF16459DE100865377 /* LRAppDelegate.h */,
 				0A13DCF016459DE100865377 /* LRAppDelegate.m */,
 				0A13DCE716459DE100865377 /* Supporting Files */,
@@ -150,6 +176,43 @@
 				0A13DD0716459DE100865377 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0A13DD1516459EDA00865377 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DD2416459F8000865377 /* LRCollectionViewCell.h */,
+				0A13DD2516459F8000865377 /* LRCollectionViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0A13DD1616459EDA00865377 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DD2716459FBB00865377 /* LRCollectionViewDataSource.h */,
+				0A13DD2816459FBB00865377 /* LRCollectionViewDataSource.m */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		0A13DD1716459EDA00865377 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DD1C16459F4900865377 /* LRCollectionViewController.h */,
+				0A13DD1D16459F4900865377 /* LRCollectionViewController.m */,
+				0A13DD1E16459F4900865377 /* LRCollectionViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0A13DD2E1645A00500865377 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				0A13DD2F1645A02800865377 /* LRTwitterAPI.h */,
+				0A13DD301645A02800865377 /* LRTwitterAPI.m */,
+			);
+			path = Twitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,6 +291,7 @@
 				0A13DCF316459DE100865377 /* Default.png in Resources */,
 				0A13DCF516459DE100865377 /* Default@2x.png in Resources */,
 				0A13DCF716459DE100865377 /* Default-568h@2x.png in Resources */,
+				0A13DD2016459F4900865377 /* LRCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +328,10 @@
 			files = (
 				0A13DCED16459DE100865377 /* main.m in Sources */,
 				0A13DCF116459DE100865377 /* LRAppDelegate.m in Sources */,
+				0A13DD1F16459F4900865377 /* LRCollectionViewController.m in Sources */,
+				0A13DD2616459F8000865377 /* LRCollectionViewCell.m in Sources */,
+				0A13DD2916459FBB00865377 /* LRCollectionViewDataSource.m in Sources */,
+				0A13DD311645A02800865377 /* LRTwitterAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +432,7 @@
 				GCC_PREFIX_HEADER = "LifeRight/LifeRight-Prefix.pch";
 				INFOPLIST_FILE = "LifeRight/LifeRight-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -375,6 +444,7 @@
 				GCC_PREFIX_HEADER = "LifeRight/LifeRight-Prefix.pch";
 				INFOPLIST_FILE = "LifeRight/LifeRight-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
