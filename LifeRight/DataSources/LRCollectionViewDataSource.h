@@ -13,4 +13,6 @@
 @property (strong, nonatomic) NSArray *tweets;
 @property (strong, nonatomic) NSArray *ads;
 
+- (void)getCurrentTimeLine;
+
 @end

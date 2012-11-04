@@ -28,4 +28,14 @@
 }
 */
 
+- (void)setupWithDictionary:(NSDictionary*)dictionary
+{
+    self.contentLabel.text = [[dictionary objectForKey:@"user"] objectForKey:@"name"];
+    self.contentTextView.text = [dictionary objectForKey:@"text"];
+}
+- (void)resizeToFitContent
+{
+    
+}
+
 @end

@@ -17,7 +17,8 @@
     return [SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter];
 }
 
-+ (void)getMyTimeline
++ (void)getMyTimelineWithHandler:(void(^)(NSData *responseData, NSHTTPURLResponse
+                                          *urlResponse, NSError *error))block;
 {
     ACAccountStore *account = [[ACAccountStore alloc] init];
     ACAccountType *twitterAccountType = [account
@@ -51,6 +52,8 @@
              
              postRequest.account = twitterAccount;
              
+             [postRequest performRequestWithHandler:block];
+             /*
              [postRequest performRequestWithHandler:
               ^(NSData *responseData, NSHTTPURLResponse
                 *urlResponse, NSError *error)
@@ -62,6 +65,7 @@
                   
                   NSLog(@"ARRAY OF TWEETS %@", dataSource);
               }];
+              */
          }
          else
          {

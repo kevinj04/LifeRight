@@ -12,6 +12,7 @@
 
 + (BOOL)isConnected;
 
-+ (void)getMyTimeline;
++ (void)getMyTimelineWithHandler:(void(^)(NSData *responseData, NSHTTPURLResponse
+                                          *urlResponse, NSError *error))block;
 
 @end

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "LRCollectionViewDataSource.h"
 
-@interface LRCollectionViewController : UICollectionViewController
+@interface LRCollectionViewController : UIViewController<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) LRCollectionViewDataSource *dataSource;
+@property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) IBOutlet LRCollectionViewDataSource *dataSource;
 
 @end
