@@ -49,7 +49,7 @@ static CGFloat text_view_margin = 24.0;
     self.contentImageView.size = CGSizeMake(250.0,250.0);
 
     [self setPostedTime:contentObject.date];
-    self.viaLabel.text = contentObject.preSourceText;
+    self.viaLabel.text = contentObject.sourceText;
     self.sourceImageView.image = contentObject.sourceImage;
 
     [self resizeToFitContent];
