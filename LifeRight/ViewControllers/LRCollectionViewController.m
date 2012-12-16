@@ -30,7 +30,7 @@
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleTwitterNotAllowedNotification:) name:twitter_not_allowed object:nil];
 
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDataSourceUpdated:) name:@"dataSourceUpdated" object:self.dataSource];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDataSourceUpdated:) name:@"dataSourceUpdated" object:nil];
 }
 
 #pragma mark - Life Cycle Methods
@@ -65,7 +65,6 @@
 #pragma mark – UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return [self.dataSource sizeForCellAtIndexPath:indexPath];
-    //return CGSizeMake(320.0,400.0);
 }
 
 - (UIEdgeInsets)collectionView:
@@ -95,7 +94,8 @@
 #pragma mark - Data Source Update Handlers
 - (void)handleDataSourceUpdated:(NSNotification*)notification
 {
-    [self.dataSource updateContentStream];
+    NSArray *contentArray = (NSArray*)[notification object];
+    [self.dataSource updateContentStreamWithContent:contentArray];
     [self.collectionView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 

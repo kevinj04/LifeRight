@@ -9,8 +9,8 @@
 #import "LRCollectionViewDataSource.h"
 #import "LRCollectionViewCell.h"
 #import "LRTwitterAPI.h"
-#import "LRTweet.h"
-#import "LRAdvertisement.h"
+#import "LRTweetContent.h"
+#import "LRAdvertisementContent.h"
 
 @implementation LRCollectionViewDataSource
 
@@ -56,13 +56,10 @@
 {
     [self getCurrentTimeLine];
     [self getAds];
-
-    [self updateContentStream];
 }
-- (void)updateContentStream
+- (void)updateContentStreamWithContent:(NSArray*)contentArray
 {
-    [self.contentStream addObjectsFromArray:self.ads];
-    [self.contentStream addObjectsFromArray:self.tweets];
+    [self.contentStream addObjectsFromArray:contentArray];
 }
 - (void)getCurrentTimeLine
 {
@@ -80,11 +77,11 @@
 
         for (NSDictionary *tweetDictionary in newTweetDictionaries)
         {
-            [self.tweets addObject:[[LRTweet alloc] initWithDictionary:tweetDictionary]];
+            [self.tweets addObject:[[LRTweetContent alloc] initWithDictionary:tweetDictionary]];
         }
 
         NSLog(@"ARRAY OF TWEETS %@", self.tweets);
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"dataSourceUpdated" object:self];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"dataSourceUpdated" object:self.tweets];
     }];
     
     // notification that we have loaded the current timeline
@@ -92,10 +89,12 @@
 
 - (void)getAds
 {
+    // in the future get a list of *NEW* undisplayed ads
     for (int i=0; i<3; i++) {
-        LRAdvertisement *adObject = [[LRAdvertisement alloc] init];
+        LRAdvertisementContent *adObject = [[LRAdvertisementContent alloc] init];
         [self.ads addObject:adObject];
     }
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"dataSourceUpdated" object:self.ads];
 }
 
 #pragma mark - Size Prediction

@@ -7,7 +7,7 @@
 //
 
 #import "LRCollectionViewCell.h"
-#import "LRTweet.h"
+#import "LRTweetContent.h"
 #import "UIView+Position.h"
 
 static CGFloat margin = 5.0;
@@ -46,6 +46,7 @@ static CGFloat text_view_margin = 24.0;
     self.contentTextView.text = contentObject.message;
     self.avatarImageView.image = contentObject.avatarImage;
     self.contentImageView.image = contentObject.image;
+    self.contentImageView.size = CGSizeMake(250.0,250.0);
 
     [self setPostedTime:contentObject.date];
     self.viaLabel.text = contentObject.preSourceText;
@@ -61,25 +62,35 @@ static CGFloat text_view_margin = 24.0;
 }
 - (void)resizeToFitContent
 {
-    CGFloat bottomOfContent = self.contentImageView.top;
+    CGFloat bottomOfContent = 0.0;
+    self.contentImageView.top = bottomOfContent;
+    self.authorLabelContainerView.top = bottomOfContent + margin;
 
-    if (nil == self.contentImageView.image)
+    if (self.content.hasImage)
     {
-        // no image so the bottom of the content is from the label, not the image
-        self.authorLabel.top = margin;
-        bottomOfContent = self.authorLabelContainerView.bottom;
+        self.contentImageView.height = image_height;
+        bottomOfContent = self.contentImageView.height + margin;
     } else {
-        bottomOfContent += self.contentImageView.height + margin;
+        // no image so the bottom of the content is from the label, not the image
+        self.contentImageView.height = 0.0;
+        bottomOfContent = self.authorLabelContainerView.bottom + margin;
     }
 
     self.contentTextView.top = bottomOfContent;
-    CGSize textViewSize = [self.content.message sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:CGSizeMake(text_view_frame.size.width, 500.0)];
-    self.contentTextView.height = textViewSize.height + text_view_margin;
-    bottomOfContent = self.contentTextView.bottom + margin;
+
+    if (self.content.hasMessage)
+    {
+        CGSize textViewSize = [self.content.message sizeWithFont:[UIFont systemFontOfSize:12.0] constrainedToSize:CGSizeMake(text_view_frame.size.width, 500.0)];
+        self.contentTextView.height = textViewSize.height + text_view_margin;
+        bottomOfContent = self.contentTextView.bottom + margin;
+    } else {
+        self.contentTextView.height = 0.0;
+    }
 
     self.sentInfoViewContainer.top = bottomOfContent;
     bottomOfContent = self.sentInfoViewContainer.bottom;
 
+    self.contentView.autoresizesSubviews = NO;
     self.contentView.height = bottomOfContent;
     self.height = bottomOfContent;
     [self setNeedsDisplay];
@@ -95,7 +106,7 @@ static CGFloat text_view_margin = 24.0;
         bottomOfContent += image_height + margin;
     } else {
         // add author label height
-        bottomOfContent += label_height;
+        bottomOfContent += label_height + margin;
     }
 
     // add text height
@@ -106,7 +117,6 @@ static CGFloat text_view_margin = 24.0;
     bottomOfContent += sent_view_height;
 
     CGSize contentSize = CGSizeMake(cell_width, bottomOfContent);
-    NSLog(@"Content size for %@ is %@", content, NSStringFromCGSize(contentSize));
     return contentSize;
 }
 

@@ -15,7 +15,7 @@
 @property (strong, nonatomic) NSMutableArray *ads;
 
 - (CGSize)sizeForCellAtIndexPath:(NSIndexPath*)indexPath;
-- (void)updateContentStream;
+- (void)updateContentStreamWithContent:(NSArray*)contentArray;
 - (void)gatherContentStream;
 - (void)getCurrentTimeLine;
 - (void)getAds;
