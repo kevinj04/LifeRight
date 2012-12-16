@@ -10,6 +10,7 @@
 
 @implementation LRCellContent
 
+#pragma mark - Initialization
 - (id)initWithDictionary:(NSDictionary*)dictionary
 {
     self = [super init];
@@ -21,23 +22,29 @@
 }
 - (void)setupWithDictionary:(NSDictionary*)dictionary
 {
+    self.author = @"";
+    self.message = @"";
+    self.avatarImage = nil; // should get a placeholder avatar?
+    self.image = nil; // should get a placeholder image?
+    self.date = nil;
+    self.sourceText = @"";
+}
 
-}
-- (BOOL)hasImage
-{
-    return NO;
-}
-- (NSString*)preSourceText
-{
-    return @"NO SET VALUE";
-}
-- (UIImage*)sourceImage
-{
-    return nil;
-}
+#pragma mark - Date Formatting
 + (NSDateFormatter*)dateFormatter
 {
     return nil;
 }
+
+#pragma mark - Content Information
+- (BOOL)hasMessage
+{
+    return (0 < self.message.length);
+}
+- (BOOL)hasImage
+{
+    return (self.image != nil);
+}
+
 
 @end

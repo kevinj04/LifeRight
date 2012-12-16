@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 somethingpointless. All rights reserved.
 //
 
-#import "LRAdvertisement.h"
+#import "LRAdvertisementContent.h"
 
-@implementation LRAdvertisement
+@implementation LRAdvertisementContent
 
 - (id)init
 {
@@ -22,13 +22,12 @@
         //NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://placekitten.com/250/250"]];
 
         self.image = [UIImage imageNamed:@"ad-california-tort.png"];
+
+        self.sourceText = @"Daily Deal";
+        self.sourceImage = [UIImage imageNamed:@"icon-deal.png"];
     }
     return self;
 }
 
-- (BOOL)hasImage
-{
-    return self.image != nil;
-}
 
 @end

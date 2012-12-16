@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 somethingpointless. All rights reserved.
 //
 
-#import "LRTweet.h"
+#import "LRTweetContent.h"
 
 NSString *const twitterUserKey = @"user";
 NSString *const twitterDateKey = @"created_at";
@@ -18,8 +18,9 @@ NSString *const twitterPreSourceText = @"via";
 
 static NSDateFormatter* dateFormatter;
 
-@implementation LRTweet
+@implementation LRTweetContent
 
+#pragma mark - Initialization
 + (void)initialize
 {
     dateFormatter = [[NSDateFormatter alloc] init];

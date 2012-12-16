@@ -15,11 +15,17 @@
 @property (strong, nonatomic) UIImage *avatarImage;
 @property (strong, nonatomic) UIImage *image;
 @property (strong, nonatomic) NSDate *date;
+@property (strong, nonatomic) UIImage *sourceImage;
+@property (strong, nonatomic) NSString *sourceText;
 
+#pragma mark - Initialization
 - (id)initWithDictionary:(NSDictionary*)dictionary;
-- (BOOL)hasImage;
-- (NSString*)preSourceText;
-- (UIImage*)sourceImage;
+
+#pragma mark - Date Formatting
 + (NSDateFormatter*)dateFormatter;
+
+#pragma mark - Content Information
+- (BOOL)hasMessage;
+- (BOOL)hasImage;
 
 @end
