@@ -49,6 +49,10 @@
 		0A9D45391645FE70007437D0 /* icon-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D45251645FE70007437D0 /* icon-facebook@2x.png */; };
 		0A9D453A1645FE70007437D0 /* icon-twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D45261645FE70007437D0 /* icon-twitter.png */; };
 		0A9D453B1645FE70007437D0 /* icon-twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A9D45271645FE70007437D0 /* icon-twitter@2x.png */; };
+		47B47631167CE0FD00737C9E /* UIView+Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B47630167CE0FD00737C9E /* UIView+Position.m */; };
+		47B47634167CEB6A00737C9E /* LRTweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B47633167CEB6A00737C9E /* LRTweet.m */; };
+		47B47638167D112000737C9E /* LRAdvertisement.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B47637167D112000737C9E /* LRAdvertisement.m */; };
+		47B4763B167D152900737C9E /* LRCellContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B4763A167D152800737C9E /* LRCellContent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +117,14 @@
 		0A9D45251645FE70007437D0 /* icon-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-facebook@2x.png"; sourceTree = "<group>"; };
 		0A9D45261645FE70007437D0 /* icon-twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-twitter.png"; sourceTree = "<group>"; };
 		0A9D45271645FE70007437D0 /* icon-twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-twitter@2x.png"; sourceTree = "<group>"; };
+		47B4762F167CE0FD00737C9E /* UIView+Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Position.h"; sourceTree = "<group>"; };
+		47B47630167CE0FD00737C9E /* UIView+Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Position.m"; sourceTree = "<group>"; };
+		47B47632167CEB6A00737C9E /* LRTweet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRTweet.h; sourceTree = "<group>"; };
+		47B47633167CEB6A00737C9E /* LRTweet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRTweet.m; sourceTree = "<group>"; };
+		47B47636167D112000737C9E /* LRAdvertisement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRAdvertisement.h; sourceTree = "<group>"; };
+		47B47637167D112000737C9E /* LRAdvertisement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAdvertisement.m; sourceTree = "<group>"; };
+		47B47639167D152800737C9E /* LRCellContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCellContent.h; sourceTree = "<group>"; };
+		47B4763A167D152800737C9E /* LRCellContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCellContent.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +189,8 @@
 		0A13DCE616459DE100865377 /* LifeRight */ = {
 			isa = PBXGroup;
 			children = (
+				47B47635167D110600737C9E /* Ads */,
+				47B4762D167CD75100737C9E /* Helpers */,
 				0A13DD2E1645A00500865377 /* Twitter */,
 				0A13DD1516459EDA00865377 /* Cells */,
 				0A13DD1616459EDA00865377 /* DataSources */,
@@ -227,6 +241,8 @@
 				0A13DD2416459F8000865377 /* LRCollectionViewCell.h */,
 				0A13DD2516459F8000865377 /* LRCollectionViewCell.m */,
 				0A13DD3B1645B49300865377 /* LRCollectionViewCell.xib */,
+				47B47639167D152800737C9E /* LRCellContent.h */,
+				47B4763A167D152800737C9E /* LRCellContent.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -255,6 +271,8 @@
 			children = (
 				0A13DD2F1645A02800865377 /* LRTwitterAPI.h */,
 				0A13DD301645A02800865377 /* LRTwitterAPI.m */,
+				47B47632167CEB6A00737C9E /* LRTweet.h */,
+				47B47633167CEB6A00737C9E /* LRTweet.m */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -285,6 +303,24 @@
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
+		};
+		47B4762D167CD75100737C9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				47B4762F167CE0FD00737C9E /* UIView+Position.h */,
+				47B47630167CE0FD00737C9E /* UIView+Position.m */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		47B47635167D110600737C9E /* Ads */ = {
+			isa = PBXGroup;
+			children = (
+				47B47636167D112000737C9E /* LRAdvertisement.h */,
+				47B47637167D112000737C9E /* LRAdvertisement.m */,
+			);
+			path = Ads;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -424,6 +460,10 @@
 				0A13DD2616459F8000865377 /* LRCollectionViewCell.m in Sources */,
 				0A13DD2916459FBB00865377 /* LRCollectionViewDataSource.m in Sources */,
 				0A13DD311645A02800865377 /* LRTwitterAPI.m in Sources */,
+				47B47631167CE0FD00737C9E /* UIView+Position.m in Sources */,
+				47B47634167CEB6A00737C9E /* LRTweet.m in Sources */,
+				47B47638167D112000737C9E /* LRAdvertisement.m in Sources */,
+				47B4763B167D152900737C9E /* LRCellContent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

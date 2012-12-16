@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+extern NSString* const twitter_not_allowed;
+
 @interface LRTwitterAPI : NSObject
 
 + (BOOL)isConnected;

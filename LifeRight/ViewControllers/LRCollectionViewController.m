@@ -8,6 +8,7 @@
 
 #import "LRCollectionViewController.h"
 #import "LRCollectionViewCell.h"
+#import "LRTwitterAPI.h"
 
 @interface LRCollectionViewController ()
 
@@ -15,6 +16,7 @@
 
 @implementation LRCollectionViewController
 
+#pragma mark - Initialization and Setup
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -24,23 +26,34 @@
     return self;
 }
 
+- (void)registerNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleTwitterNotAllowedNotification:) name:twitter_not_allowed object:nil];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDataSourceUpdated:) name:@"dataSourceUpdated" object:self.dataSource];
+}
+
+#pragma mark - Life Cycle Methods
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     self.dataSource = [[LRCollectionViewDataSource alloc] init];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleDataSourceUpdated:) name:@"dataSourceUpdated" object:self.dataSource];
-    [self.dataSource getCurrentTimeLine];
-    
+
+    [self registerNotifications];
+
     //[self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"FlickrCell"];
     //[self.collectionView registerClass:[LRCollectionViewCell class] forCellWithReuseIdentifier:@"AnyCell"];
     UINib *cellNib = [UINib nibWithNibName:@"LRCollectionViewCell" bundle:[NSBundle mainBundle]];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:@"AnyCell"];
+
+    [self.dataSource gatherContentStream];
 }
 
 - (void)viewDidUnload
 {
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"dataSourceUpdated" object:self.dataSource];
+    [super viewDidUnload];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +64,8 @@
 
 #pragma mark – UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(400.0,400.0);
+    return [self.dataSource sizeForCellAtIndexPath:indexPath];
+    //return CGSizeMake(320.0,400.0);
 }
 
 - (UIEdgeInsets)collectionView:
@@ -81,6 +95,21 @@
 #pragma mark - Data Source Update Handlers
 - (void)handleDataSourceUpdated:(NSNotification*)notification
 {
+    [self.dataSource updateContentStream];
     [self.collectionView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
+
+#pragma mark - Notification Handlers
+- (void)handleTwitterNotAllowedNotification:(NSNotification*)notification
+{
+    // must run this on the main thread
+    [self performSelectorOnMainThread:@selector(postFailedToAccessTwitterAlert:) withObject:notification waitUntilDone:NO];
+
+}
+- (void)postFailedToAccessTwitterAlert:(NSNotification*)notification
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"You must allow this app to access twitter!" delegate:nil cancelButtonTitle:@"Aight." otherButtonTitles:nil];
+    [alertView show];
+}
+
 @end

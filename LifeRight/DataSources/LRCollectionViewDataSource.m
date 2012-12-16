@@ -9,6 +9,8 @@
 #import "LRCollectionViewDataSource.h"
 #import "LRCollectionViewCell.h"
 #import "LRTwitterAPI.h"
+#import "LRTweet.h"
+#import "LRAdvertisement.h"
 
 @implementation LRCollectionViewDataSource
 
@@ -19,6 +21,7 @@
     {
         self.tweets = [[NSMutableArray alloc] initWithCapacity:100];
         self.ads = [[NSMutableArray alloc] initWithCapacity:20];
+        self.contentStream = [[NSMutableArray alloc] initWithCapacity:120];
     }
     return self;
 }
@@ -27,14 +30,16 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     LRCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AnyCell" forIndexPath:indexPath];
-    
-    [cell setupWithDictionary:[self.tweets objectAtIndex:indexPath.row]];
+
+    LRCellContent *contentObject = [self.contentStream objectAtIndex:indexPath.row];
+
+    [cell setupWithContent:contentObject];
 
     return cell;
 }
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.tweets.count + self.ads.count;
+    return self.contentStream.count;
 }
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
@@ -46,7 +51,19 @@
 }
 
 
-#pragma mark - Twitter Initialization
+#pragma mark - Content Initialization
+- (void)gatherContentStream
+{
+    [self getCurrentTimeLine];
+    [self getAds];
+
+    [self updateContentStream];
+}
+- (void)updateContentStream
+{
+    [self.contentStream addObjectsFromArray:self.ads];
+    [self.contentStream addObjectsFromArray:self.tweets];
+}
 - (void)getCurrentTimeLine
 {
     [LRTwitterAPI getMyTimelineWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error) {
@@ -56,15 +73,36 @@
             // TODO: handle errors
         }
         
-        NSArray *newTweets = [NSJSONSerialization JSONObjectWithData:responseData
+        NSArray *newTweetDictionaries = [NSJSONSerialization JSONObjectWithData:responseData
                                options:NSJSONReadingMutableLeaves
                                error:&error];
-        self.tweets = newTweets;
+
+
+        for (NSDictionary *tweetDictionary in newTweetDictionaries)
+        {
+            [self.tweets addObject:[[LRTweet alloc] initWithDictionary:tweetDictionary]];
+        }
+
         NSLog(@"ARRAY OF TWEETS %@", self.tweets);
         [[NSNotificationCenter defaultCenter] postNotificationName:@"dataSourceUpdated" object:self];
     }];
     
     // notification that we have loaded the current timeline
+}
+
+- (void)getAds
+{
+    for (int i=0; i<3; i++) {
+        LRAdvertisement *adObject = [[LRAdvertisement alloc] init];
+        [self.ads addObject:adObject];
+    }
+}
+
+#pragma mark - Size Prediction
+- (CGSize)sizeForCellAtIndexPath:(NSIndexPath*)indexPath
+{
+    LRCellContent *contentObject = [self.contentStream objectAtIndex:indexPath.row];
+    return [LRCollectionViewCell predictSizeForContent:contentObject];
 }
 
 @end

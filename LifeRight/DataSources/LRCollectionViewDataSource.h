@@ -10,9 +10,14 @@
 
 @interface LRCollectionViewDataSource : NSObject<UICollectionViewDataSource>
 
-@property (strong, nonatomic) NSArray *tweets;
-@property (strong, nonatomic) NSArray *ads;
+@property (strong, nonatomic) NSMutableArray *contentStream;
+@property (strong, nonatomic) NSMutableArray *tweets;
+@property (strong, nonatomic) NSMutableArray *ads;
 
+- (CGSize)sizeForCellAtIndexPath:(NSIndexPath*)indexPath;
+- (void)updateContentStream;
+- (void)gatherContentStream;
 - (void)getCurrentTimeLine;
+- (void)getAds;
 
 @end

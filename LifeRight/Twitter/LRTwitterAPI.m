@@ -10,6 +10,8 @@
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
 
+NSString* const twitter_not_allowed = @"twitter_not_allowed";
+
 @implementation LRTwitterAPI
 
 + (BOOL)isConnected
@@ -69,8 +71,7 @@
          }
          else
          {
-             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"You must allow this app to access twitter!" delegate:nil cancelButtonTitle:@"Aight." otherButtonTitles:nil];
-             [alertView show];
+             [[NSNotificationCenter defaultCenter] postNotificationName:twitter_not_allowed object:self];
          }
          
      }];
