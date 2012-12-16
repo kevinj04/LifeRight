@@ -60,6 +60,10 @@
 - (void)updateContentStreamWithContent:(NSArray*)contentArray
 {
     [self.contentStream addObjectsFromArray:contentArray];
+    self.contentStream = [self.contentStream sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        if (arc4random_uniform(2) == 0) return NSOrderedAscending;
+        else return NSOrderedDescending;
+    }].mutableCopy;
 }
 - (void)getCurrentTimeLine
 {
@@ -90,7 +94,7 @@
 - (void)getAds
 {
     // in the future get a list of *NEW* undisplayed ads
-    for (int i=0; i<3; i++) {
+    for (int i=0; i<7; i++) {
         LRAdvertisementContent *adObject = [[LRAdvertisementContent alloc] init];
         [self.ads addObject:adObject];
     }

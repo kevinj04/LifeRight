@@ -96,6 +96,7 @@
 {
     NSArray *contentArray = (NSArray*)[notification object];
     [self.dataSource updateContentStreamWithContent:contentArray];
+    NSLog(@"New content stream: %@",  self.dataSource.contentStream);
     [self.collectionView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 

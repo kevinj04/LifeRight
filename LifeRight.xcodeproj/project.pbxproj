@@ -53,6 +53,7 @@
 		47B47634167CEB6A00737C9E /* LRTweetContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B47633167CEB6A00737C9E /* LRTweetContent.m */; };
 		47B47638167D112000737C9E /* LRAdvertisementContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B47637167D112000737C9E /* LRAdvertisementContent.m */; };
 		47B4763B167D152900737C9E /* LRCellContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B4763A167D152800737C9E /* LRCellContent.m */; };
+		47E1F7AF167D90AC002C13F2 /* LRCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E1F7AE167D90AC002C13F2 /* LRCollectionViewLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,8 @@
 		47B47637167D112000737C9E /* LRAdvertisementContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRAdvertisementContent.m; sourceTree = "<group>"; };
 		47B47639167D152800737C9E /* LRCellContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCellContent.h; sourceTree = "<group>"; };
 		47B4763A167D152800737C9E /* LRCellContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCellContent.m; sourceTree = "<group>"; };
+		47E1F7AD167D90AC002C13F2 /* LRCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRCollectionViewLayout.h; sourceTree = "<group>"; };
+		47E1F7AE167D90AC002C13F2 /* LRCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRCollectionViewLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +192,7 @@
 		0A13DCE616459DE100865377 /* LifeRight */ = {
 			isa = PBXGroup;
 			children = (
+				47E1F7AC167D9087002C13F2 /* Layouts */,
 				47B47635167D110600737C9E /* Ads */,
 				47B4762D167CD75100737C9E /* Helpers */,
 				0A13DD2E1645A00500865377 /* Twitter */,
@@ -320,6 +324,15 @@
 				47B47637167D112000737C9E /* LRAdvertisementContent.m */,
 			);
 			path = Ads;
+			sourceTree = "<group>";
+		};
+		47E1F7AC167D9087002C13F2 /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				47E1F7AD167D90AC002C13F2 /* LRCollectionViewLayout.h */,
+				47E1F7AE167D90AC002C13F2 /* LRCollectionViewLayout.m */,
+			);
+			path = Layouts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +477,7 @@
 				47B47634167CEB6A00737C9E /* LRTweetContent.m in Sources */,
 				47B47638167D112000737C9E /* LRAdvertisementContent.m in Sources */,
 				47B4763B167D152900737C9E /* LRCellContent.m in Sources */,
+				47E1F7AF167D90AC002C13F2 /* LRCollectionViewLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
